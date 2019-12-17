@@ -26,6 +26,9 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
 * Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
+Cleaned data by filling NaN and created new csv files
+Used sqlalchemy to create SQLite database engine
+
 ### Precipitation Analysis
 
 * Design a query to retrieve the last 12 months of precipitation data.
@@ -41,6 +44,8 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
   ![precipitation](Images/precipitation.png)
 
 * Use Pandas to print the summary statistics for the precipitation data.
+
+As per data Precipitation in month of August is very low. 
 
 ### Station Analysis
 
@@ -122,6 +127,9 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 * Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
 
+Used paired t-test as both samples (June & December) consist of the same test subjects 
+pvalue is 3.9 degree celsius that means temperature difference between June & December is statistically significant
+
 ### Temperature Analysis II
 
 * The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d` and return the minimum, average, and maximum temperatures for that range of dates.
@@ -135,6 +143,8 @@ Now that you have completed your initial analysis, design a Flask API based on t
   * Use the peak-to-peak (tmax-tmin) value as the y error bar (yerr).
 
     ![temperature](Images/temperature.png)
+	
+	Average Temperature lies below 80F in Hawaii
 
 ### Daily Rainfall Average
 
